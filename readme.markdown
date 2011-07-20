@@ -2,9 +2,11 @@
 
 https://github.com/Nerian/simple_gemset
 
-I am a Ruby developer. As such, I am constantly creating new Ruby projects.                       
+I am a Ruby developer. As such, I am constantly creating new Ruby projects. As I want them to be isolated from each other I use a RVM's .rvmrc per project. 
 
-Simple gemset is a generator for .rvmrc files. 
+Typing all those times a .rvmrc file takes 8 seconds of my life away. That sucks. 
+
+Simple_gemset makes creating a new .rvmrc file as simple as `$ simple_gemset`
 
 ## Installing:
 
@@ -14,28 +16,28 @@ Simple gemset is a generator for .rvmrc files.
 
 Basically: 
 
-    simple_generator [ name_of_gemset ] [ --ruby ] # if you want to select the ruby version       
+    simple_gemset [ name_of_gemset ] [ --ruby ] # if you want to select the ruby version       
 
 Examples:
 
     $ mkdir my_new_project
     $ cd my_new_project
 
-    $ simple_generator
+    $ simple_gemset
 		create  .rvmrc               
 
 		# Generated with Simple_gemset	
 	    rvm gemset create 'name of the current folder'
 		rvm gemset use 'name of the current folder'
 	
-	$ simple_generator my_gemset
+	$ simple_gemset my_gemset
 		create  .rvmrc		                        
 		                                  
 		# Generated with Simple_gemset
 		rvm gemset create 'my_gemset'
 		rvm gemset use 'my_gemset'
 
-	$ simple_generator --ruby
+	$ simple_gemset --ruby
 		Choose which Ruby version do you want to use
    	 	0: ruby-1.8.6-p420
 		1: ruby-1.8.6-head
@@ -64,7 +66,7 @@ Examples:
 		rvm gemset create 'name of the current folder'
 		rvm gemset use 'name of the current folder' 
 		
-	$ simple_generator my_gemset --ruby
+	$ simple_gemset my_gemset --ruby
 		Choose which Ruby version do you want to use
    	 	0: ruby-1.8.6-p420
 		1: ruby-1.8.6-head
