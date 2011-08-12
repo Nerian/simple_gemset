@@ -15,8 +15,8 @@ describe '# Command line calls' do
     
     it { assert { subject == 
       "# Generated with Simple_gemset \n"+
-      "rvm gemset create 'simple_gemset'\n"+
-      "rvm gemset use 'simple_gemset'" }}        
+      "rvm gemset create simple_gemset\n"+
+      "rvm gemset use simple_gemset" }}        
   end
 
   describe "# simple_gemset my_gemset_name" do
@@ -28,8 +28,8 @@ describe '# Command line calls' do
     
     it { assert { subject == 
       "# Generated with Simple_gemset \n"+
-      "rvm gemset create 'my_gemset_name'\n"+
-      "rvm gemset use 'my_gemset_name'" } } 
+      "rvm gemset create my_gemset_name\n"+
+      "rvm gemset use my_gemset_name" } } 
   end                 
   
   describe "# simple_gemset --ruby" do
@@ -40,9 +40,9 @@ describe '# Command line calls' do
     }
     it { assert { subject == 
       "# Generated with Simple_gemset \n"+
-      "rvm use 'ruby-1.9.2-p180'\n"+
-      "rvm gemset create 'simple_gemset'\n"+
-      "rvm gemset use 'simple_gemset'" } }        
+      "rvm use ruby-1.9.2-p180\n"+
+      "rvm gemset create simple_gemset\n"+
+      "rvm gemset use simple_gemset" } }        
   end  
   
   describe "# simple_gemset my_gemset_name --ruby" do       
@@ -54,9 +54,9 @@ describe '# Command line calls' do
     
     it { assert { subject == 
       "# Generated with Simple_gemset \n"+
-      "rvm use 'ruby-1.9.2-p180'\n"+
-      "rvm gemset create 'my_gemset_name'\n"+
-      "rvm gemset use 'my_gemset_name'" } }           
+      "rvm use ruby-1.9.2-p180\n"+
+      "rvm gemset create my_gemset_name\n"+
+      "rvm gemset use my_gemset_name" } }           
   end
 end
 
